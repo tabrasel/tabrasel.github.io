@@ -32,7 +32,7 @@ footer {
     border-top: 1px solid #d5d5d5;
     font-size: .8em;
 }
-img.thumbnail-circle{
+img.thumbnail-circle {
     width: 256px;
     height: 256px;
     border-radius: 50%;
@@ -53,7 +53,7 @@ ul.posts li {
 .fa {
   padding: 20px;
   font-size: 30px;
-  width: 50px;
+  width: 64px;
   text-align: center;
   text-decoration: none;
 }
