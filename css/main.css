@@ -32,10 +32,12 @@ footer {
     border-top: 1px solid #d5d5d5;
     font-size: .8em;
 }
-img.thumb-circle{
+img.thumbnail-circle{
     width: 256px;
     height: 256px;
     border-radius: 50%;
+    display: block;
+    margin: 0 auto;
 }
 
 ul.posts { 
