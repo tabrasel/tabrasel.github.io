@@ -23,7 +23,7 @@ h1 {
     font-size: 3em;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
-p, ul {
+p {
     font-size: 1.4em;
     line-height: 1.4em;
     color: #333;
@@ -52,8 +52,8 @@ ul.posts li {
 /* Style all font awesome icons */
 .fa {
   padding: 20px;
-  font-size: 30px;
-  width: 64px;
+  font-size: 48px;
+  width: 50px;
   text-align: center;
   text-decoration: none;
 }
