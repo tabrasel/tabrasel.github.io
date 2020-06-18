@@ -76,5 +76,8 @@ ul.posts li {
 }
 
 .project-blurb {
+    margin: 0px 16px;
+    padding: 0px 16px;
     border: 1px solid #999;
+    border-radius: 5px;
 }
