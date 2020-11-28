@@ -17,7 +17,7 @@ nav ul li, footer ul li {
 
 a {
     text-decoration: none;
-    color: DarkGray;
+    color: #666;
 }
 
 a:hover {
@@ -36,12 +36,13 @@ h2 {
 
 p {
     font-size: 14pt;
+    line-height: 18pt;
     color: #333;
 }
 
 footer {
     border-top: 1px solid #d5d5d5;
-    font-size: .8em;
+    font-size: 9pt;
 }
 
 img.thumbnail-circle {
@@ -87,5 +88,5 @@ ul.posts li {
     margin: 0px 16px;
     padding: 0px 16px;
     border: 1px solid #999;
-    border-radius: 5px;
+    border-radius: 10px;
 }
