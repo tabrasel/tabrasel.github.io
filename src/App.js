@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import styles from './App.module.css';
+
+import About from './About';
+import NavBar from './NavBar';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.App}>
+      <NavBar />
+
+      <div className="container p-4">
+        <About />
+      </div>
+
+      <div className="p-3">
+        <hr />
+        <div className="d-flex justify-content-around">
+          <a href="mailto:tatebrasel@gmail.com"><i className="fas fa-envelope"></i> Email</a>
+          <a href="https://www.linkedin.com/in/tate-brasel/"><i className="fab fa-linkedin"></i> Linkedin</a>
+          <a href="https://github.com/tabrasel"><i className="fab fa-github"> GitHub</i></a>
+        </div>
+      </div>
+
     </div>
   );
 }
