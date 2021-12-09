@@ -16,9 +16,11 @@ function App() {
       <div className="p-3">
         <hr />
         <div className="d-flex justify-content-around">
-          <a href="mailto:tatebrasel@gmail.com"><i className="fas fa-envelope"></i> Email</a>
-          <a href="https://www.linkedin.com/in/tate-brasel/"><i className="fab fa-linkedin"></i> Linkedin</a>
-          <a href="https://github.com/tabrasel"><i className="fab fa-github"> GitHub</i></a>
+          <div className={styles.linksList}>
+            <a href="mailto:tatebrasel@gmail.com"><i className="fas fa-envelope"></i> Email</a>
+            <a href="https://www.linkedin.com/in/tate-brasel/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i> Linkedin</a>
+            <a href="https://github.com/tabrasel" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"> GitHub</i></a>
+          </div>
         </div>
       </div>
 

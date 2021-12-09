@@ -5,7 +5,22 @@
   font-family: 'Crimson Text', serif;
 }
 
+.footer {
+  display: flex;
+  justify-content: center;
+}
+
+.linksList {
+  display: flex;
+  gap: min(calc(12px + 5vw), 80px);
+}
+
+.linksList a {
+  display: block;
+}
+
 a {
+  font-size: min(calc(15px + 0.4vw), 22px);
   color: #960000;
   text-decoration: none;
 }
