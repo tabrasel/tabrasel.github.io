@@ -1,16 +1,16 @@
 .p {
-  font-size: calc(15px + 0.4vw);
+  font-size: min(calc(15px + 0.4vw), 22px);
   text-align: justify;
 }
 
-.ul {
-  font-size: calc(12px + 0.6vw);
+h1 {
+  font-size: min(calc(24.545px + 0.6545vw), 36px);
 }
 
-.ulTitle {
-  font-size: calc(14px + 0.5vw);
-  margin-bottom: 0px;
+h3 {
+  font-size: min(calc(150px + 0.4vw), 26px);
   font-weight: bold;
+  margin: 0px;
 }
 
 .profileImg {

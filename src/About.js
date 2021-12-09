@@ -10,69 +10,48 @@ function About() {
       </div>
 
       <section className="mb-5">
+        <h1 className="mb-2">About</h1>
+
         <p className={styles.p}>
-          Hi, my name's Tate.
+          Hi, I'm Tate! I'm a recent computer science graduate from Seattle University and an aspiring software engineer.
         </p>
 
         <p className={styles.p}>
-          I develop geospatial analysis tools at <a href="https://terrainworks.com/">TerrainWorks</a>, and before that I worked for <a href="http://mazamascience.com/">Mazama Science</a> building utilities for air quality monitoring. I've found these experiences incredibly interesting—both the problems we faced and the technologies we used to addressed them—and I hope to continue working on projects similarly concerned with public and environmental health.
+          I have experience building various geospatial data analysis tools from my time working at <a href="https://terrainworks.com/" target="_blank" rel="noopener noreferrer">TerrainWorks</a> and <a href="http://mazamascience.com/" target="_blank" rel="noopener noreferrer">Mazama Science</a>. At Mazama Science I helped build R packages for air quality data analysis and visualization, while at TerrainWorks I created machine-learning ArcGIS toolboxes for detecting geospatial features from LiDAR imagery. Although I didn't foresee specializing in GIS, I found both experiences incredibly interesting, instructive, and rewarding given the roles our products played in land-use planning, environmental protection, and public health.
         </p>
 
         <p className={styles.p}>
-          Although I have more professional experience in the backend (primarily building R packages and scripts) I've always had an interest in frontend development for its close relationship with visual design and user interaction. I practice this in my spare time by building <a href="#">web applications as well as small games and simulations</a>.
+          While my professional experience so far has focused on R backends for GIS tools, I've always had a personal interest in frontends and visuals. The university courses I took in web development and SaaS inspired me to start building full-stack web applications in my free time—my goal being to work towards a full career building web-based tools.
         </p>
 
         <p className={styles.p}>
-          In my remaining free time, you can usually find me reading vintage mystery novels or watching gialli.
+          In my remaining free time (when I'm not coding!) you can usually find me reading vintage mystery novels, watching gialli, or listening to 70s poliziotteschi film soundtracks.
         </p>
       </section>
 
       <section>
-        <h2 className="h2">Skills</h2>
+        <h1 className="mb-2">Skills</h1>
+
+        <h3>Languages</h3>
+        <p className={styles.p}>
+          Java, Python, R, HTML, CSS, JavaScript, TypeScript, SQL
+        </p>
+
+        <h3>Web Technologies</h3>
+        <p className={styles.p}>
+          React, Angular, Node.js, Express, Mongoose, P5.js
+        </p>
+
+        <h3>Other Technologies</h3>
+        <p className={styles.p}>
+          git, GitHub, MongoDB, AWS, Heroku, ArcGIS
+        </p>
+
+        <h3>Development Process</h3>
+        <p className={styles.p}>
+          Working in an agile team, pair programming, planning sprints, giving technical presentations, writing documantation, project tracking with Jira
+        </p>
       </section>
-
-      <div className="row">
-        <div className="col">
-          <p className={styles.ulTitle}>
-            Languages
-          </p>
-
-          <ul className={styles.ul}>
-            <li>R (tidyverse, mlr3, RMarkdown)</li>
-            <li>JavaScript (React, Bootstrap)</li>
-            <li>TypeScript</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>Java</li>
-            <li>Processing</li>
-          </ul>
-        </div>
-
-        <div className="col">
-          <p className={styles.ulTitle}>
-            Web Technologies
-          </p>
-
-          <ul className={styles.ul}>
-            <li>Angular</li>
-            <li>Node.js</li>
-            <li>Express</li>
-            <li>Mongoose</li>
-          </ul>
-        </div>
-
-        <div className="col">
-          <p className={styles.ulTitle}>
-            Other Technologies
-          </p>
-
-          <ul className={styles.ul}>
-            <li>git</li>
-            <li>GitHub</li>
-            <li>MongoDB</li>
-          </ul>
-        </div>
-      </div>
     </section>
   );
 }
