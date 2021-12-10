@@ -1,0 +1,16 @@
+.projects {
+
+}
+
+.projectsList {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.projectsListItem {
+  width: 400px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
