@@ -17,11 +17,11 @@ function About() {
         </p>
 
         <p className={styles.p}>
-          I have experience building various geospatial data analysis tools from my time working at <a href="https://terrainworks.com/" target="_blank" rel="noopener noreferrer">TerrainWorks</a> and <a href="http://mazamascience.com/" target="_blank" rel="noopener noreferrer">Mazama Science</a>. At Mazama Science I helped build R packages for air quality data analysis and visualization, while at TerrainWorks I created machine-learning ArcGIS toolboxes for detecting geospatial features from LiDAR imagery. Although I didn't foresee specializing in GIS, I found both experiences incredibly interesting, instructive, and rewarding given the roles our products played in land-use planning, environmental protection, and public health.
+          I have experience developing various geospatial data analysis tools from my time working at <a href="https://terrainworks.com/" target="_blank" rel="noopener noreferrer">TerrainWorks</a> and <a href="http://mazamascience.com/" target="_blank" rel="noopener noreferrer">Mazama Science</a>. At Mazama Science I helped build R packages for air quality data analysis and visualization, while at TerrainWorks I created machine-learning ArcGIS toolboxes for detecting geospatial features from LiDAR imagery. I found both experiences incredibly interesting, instructive, and rewarding given the roles of our products in land-use planning, environmental protection, and public health.
         </p>
 
         <p className={styles.p}>
-          While my professional experience so far has focused on R backends for GIS tools, I've always had a personal interest in frontends and visuals. The university courses I took in web development and SaaS inspired me to start building full-stack web applications in my free time—my goal being to work towards a full career building web-based tools.
+          Although my professional experience has been focused on R backends for GIS tools, I've always had a personal interest in frontends and visuals. The university courses I took in web development and SaaS inspired me to start building full-stack web applications in my spare time, and while these have helped me with personal interests, they have also helped me develop a foundation for pursuing a professional career building web-based tools.
         </p>
 
         <p className={styles.p}>

@@ -8,7 +8,7 @@ h1 {
 }
 
 h3 {
-  font-size: min(calc(150px + 0.4vw), 26px);
+  font-size: min(calc(17.7272px + 0.4727vw), 26px);
   font-weight: bold;
   margin: 0px;
 }
