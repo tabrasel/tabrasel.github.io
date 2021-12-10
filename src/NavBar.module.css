@@ -1,3 +1,13 @@
-.navbar {
-  background-color: #960000;
+.NavBar {
+  border-bottom: 1px solid #ddd;
+}
+
+.navBarBrand {
+  margin-right: min(calc(24.5454px + 0.6545vw), 36px);
+  color: black;
+  font-size: min(calc(24.5454px + 0.6545vw), 36px);
+}
+
+.navLink {
+  color: blue;
 }
