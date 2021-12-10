@@ -1,6 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import styles from './NavBar.module.css';
 
+import { Link } from 'react-router-dom';
+
 function NavBar() {
   return (
     <div className={styles.NavBar}>
@@ -10,11 +12,11 @@ function NavBar() {
         <button className={`${styles.navbarToggler} navbar-toggler`} type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
-        
+
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className={`${styles.navLink} nav-link`} href="#">Projects</a>
+              <Link className={`${styles.navLink} nav-link`} to="/projects">Projects</Link>
             </li>
           </ul>
         </div>
