@@ -19,6 +19,10 @@
   display: block;
 }
 
+p {
+  font-size: min(calc(15px + 0.4vw), 22px);
+}
+
 a {
   font-size: min(calc(15px + 0.4vw), 22px);
   color: #960000;
