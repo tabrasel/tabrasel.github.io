@@ -2,15 +2,13 @@
 
 }
 
-.projectsList {
+.projectList {
   display: flex;
-  justify-content: space-between;
+  gap: 30px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
-.projectsListItem {
-  width: 400px;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
+header {
+  margin-bottom: 40px;
 }
