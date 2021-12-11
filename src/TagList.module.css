@@ -1,0 +1,12 @@
+.tagList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.tagListItem {
+  border: 1px solid #ddd;
+  padding: 0px 4px;
+  border-radius: 5px;
+  color: #888;
+}
