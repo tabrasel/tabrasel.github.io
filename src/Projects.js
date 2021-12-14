@@ -1,5 +1,7 @@
 import styles from './Projects.module.css';
 
+import { Link } from 'react-router-dom';
+
 import ProjectListItem from './ProjectListItem';
 
 function Projects() {
@@ -14,13 +16,15 @@ function Projects() {
       </header>
 
       <div className={styles.projectList}>
-        <ProjectListItem
-          title="Music Club"
-          description="A fun and structured way to share music with friends."
-          context="Personal"
-          timeFrame="Jul 2021 - present"
-          tags={['React', 'Angular', 'Node.js', 'Express', 'MongoDB', 'S3', 'Heroku', 'HTML', 'CSS', 'JavaScript', 'TypeScript', 'Bootstrap']}
-          />
+        <Link to="/music-club">
+          <ProjectListItem
+            title="Music Club"
+            description="A fun and structured way to share music with friends."
+            context="Personal"
+            timeFrame="Jul 2021 - present"
+            tags={['React', 'Angular', 'Node.js', 'Express', 'MongoDB', 'S3', 'Heroku', 'HTML', 'CSS', 'JavaScript', 'TypeScript', 'Bootstrap']}
+            />
+        </Link>
 
         <ProjectListItem
           title="Landslide Susceptibility"
@@ -63,7 +67,7 @@ function Projects() {
           />
 
         <ProjectListItem
-          title="Monitoring GUI"
+          title="Air Monitor Archive"
           description="A web interface for interacting with USFS AirFire services."
           context="Work (Mazama Science)"
           timeFrame="Jan 2021 - Mar 2021"
@@ -72,7 +76,7 @@ function Projects() {
 
         <ProjectListItem
           title="SproinGL"
-          description="A 3D arena-based fighting game built around spring physics."
+          description="A 3D action game built around spring physics."
           context="School (Computer Graphics)"
           timeFrame="Apr 2020 - Jun 2020"
           tags={['C++', 'OpenGL', 'GLFW']}
@@ -80,7 +84,7 @@ function Projects() {
 
         <ProjectListItem
           title="VCAS"
-          description="My senior capstone project: A video call quality analysis system."
+          description="A video call quality analysis system."
           context="School (Capstone)"
           timeFrame="Sep 2019 - Jun 2020"
           tags={['HTML', 'CSS', 'TypeScript', 'WebRTC', 'EC2', 'Kinesis', 'S3', 'Lambda', 'ElasticSearch', 'Kibana']}

@@ -6,6 +6,7 @@ import { HashRouter, Route, Routes } from "react-router-dom";
 import About from './About';
 import NavBar from './NavBar';
 import Projects from './Projects';
+import ProjectMusicClub from './ProjectMusicClub';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Routes>
             <Route exact path="/" element={<About />} />
             <Route exact path="/projects" element={<Projects />} />
+            <Route exact path="/music-club" element={<ProjectMusicClub />} />
           </Routes>
         </div>
 
