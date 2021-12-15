@@ -9,19 +9,19 @@ function ProjectMusicClub() {
         <h2>Background</h2>
 
         <p>
-          I can't quite remember what prompted it, but back in 2019, two friends and I started a group chat to share music between us. We each posted a couple of albums and started listening. A week later, when another friend joined in, one of us had an idea:
+          I can't quite remember what prompted it, but back in 2019, two friends and I started a group chat for sharing music. We each posted a couple of albums and several days later, one of us had an idea:
         </p>
 
         <img src={RulesImg} width="400px" />
 
         <p>
-          This simple idea not only provided a fun and structured way to share and discover music, it also gave us a chance to learn about each others' tastes. More rules were quickly established:
+          This simple idea not only provided a fun and structured way to share and discover albums, it also gave us a chance to learn about each others' music tastes. More rules were quickly established:
         </p>
 
         <img src="" />
 
         <p>
-          The structure that eventually emerged went (and still goes) something like this:
+          The structure that eventually emerged went something like this:
         </p>
 
         <ol>
@@ -35,7 +35,7 @@ function ProjectMusicClub() {
             Participants post their picked songs.
           </li>
           <li>
-            The votes for the picked songs are tallied. For each album, the song with the most votes is deemed the winner and added to a shared Spotify playlist.
+            Votes for the picked songs are tallied. For each album, the song with the most votes is deemed the winner and added to a shared Spotify playlist.
           </li>
           <li>
             Rinse. Repeat.
@@ -43,15 +43,15 @@ function ProjectMusicClub() {
         </ol>
 
         <p>
-          The setup has continued to evolve over the years. We three "founders" have participated in every round, but we often have a guest who stays on for a few at a time. Recently we've also started doing "themed" rounds where participants are given a prompt to determine what albums to post. It can be objective like: "participants must post an artist who shares their star sign", or entirely subjective like: "rainy day music". So far though, the majority of the rounds have been a complete free-for-all.
+          The setup continued to evolve over the years. While we three "founders" have participated in every round, we often have a guest who stays on for a few at a time. Recently, we've also started doing "themed" rounds where participants are given a prompt to decide what albums to post. It can be objective like: "participants must post an artist who shares their star sign", or entirely subjective like: "rainy day music". So far though, the majority of the rounds have been a complete free-for-all.
         </p>
 
         <p>
-          Unfortunately, I've found group chats are not the best medium for organizing information. If I want to look back at my friends' top songs for Avril Lavigne's 2002 hit <em>Let Go</em>, or find out who posted <em>Twin Temple (Bring You Their Signature Sound... Satanic Doo-Wop)</em>, I'm going to have to do a lot of scrolling to get to those rounds in our chat history! And wait...what rounds were those albums even posted in?! The text thread format simply isn't practical for getting an overview of the dozens of rounds we've held so far, and this problem will only get worse with time. Our recent migration to Facebook messenger now means there isn't even a single thread to find this stuff in!
+          Unfortunately, I realized early on that group chats are not the best medium for organizing information. If I wanted to look back at my friends' top songs for Avril Lavigne's 2002 hit <em>Let Go</em>, or find out who posted <em>Twin Temple (Bring You Their Signature Sound... Satanic Doo-Wop)</em>, I had to do a lot of scrolling through our chat history! The text thread format simply isn't practical for getting an overview of the dozens of rounds we've held so far, and this problem will only get worse with time. Our recent migration to Facebook messenger also means there isn't even a single thread to find this stuff in!
         </p>
 
         <p>
-          Besides the practical shortcomings of our group chat, something dawned on me earlier this year: <em>hey...we're generating a lot of data!</em> It's true; every posted album and liked song says something about our listening habits. We could learn a lot of interesting things about ourselves and the club by studying how we participate. Things like:
+          Besides the practical shortcomings of our group chat, something else dawned on me earlier this year: <em>we're generating a lot of data!</em> It's true; every posted album and liked song says something about our listening habits. We could learn a lot of interesting things about ourselves and the club by studying how we participate. Things like:
         </p>
 
         <ul>
@@ -70,16 +70,25 @@ function ProjectMusicClub() {
         </ul>
 
         <p>
-          So I had two things I wanted: a way to easily view information about our past rounds and the ability to gain insights from our listening habits. A website, I decided, was the best way to achieve these.
+          So I realized I had two things I wanted: 1) a way to easily view information about our past rounds and 2) the ability to gain insights from our listening habits. A website, I decided, was the best way to achieve these goals.
         </p>
       </section>
 
       <section>
-        <h2>Backend</h2>
+        <h2>Starting from the Back(end)</h2>
+
+        <h3>Database</h3>
+        <p>
+          In order to convey information about our club, my website had to have access to data from every round. But what data is needed? How should it be organized? My first order of business was to design a database that would store all the information I thought necessary to provide summaries and insights:
+        </p>
+
+        <img src="" />
 
         <p>
-          In order to convey information about our club, my website had to have access to data from every round. But what data is necessary, and how should it be organized? My first order of business was to design a database that would store all the information I thought would be necessary for summaries and insights:
+          Next, I had to determine what database management system to use. The rigid schema of each model hinted a relational database structure, since each round, album, and member should have the same fields as every other round, album, and member. However,
         </p>
+
+        <h3>Web Service</h3>
       </section>
 
       <section>
