@@ -27,7 +27,7 @@ function ProjectMusicClub() {
         <img src="" alt="Message on album length limits" />
 
         <p>
-          The "round" structure that eventually emerged looked something like this:
+          The "round" structure that eventually emerged went something like this:
         </p>
 
         <ol>
@@ -49,11 +49,11 @@ function ProjectMusicClub() {
         </ol>
 
         <p>
-          We've kept this up for several years now, and the setup has continued to evolve. While we three "founders" have participated in every round, we usually have a guest who joins in for a few at a time now too. We've also started doing "themed" rounds where participants are given a prompt to decide what albums to post. Some have been objective like: "participants must post an artist who shares their star sign", or entirely subjective like: "rainy day music". The majority of the rounds have been a complete free-for-all so far—anyone can post anything that hasn't been shared yet. We try to limit ourselves to albums of reasonable length and number of songs though, and repeat artists are allowed but generally avoided.
+          We've kept this up for several years now, and the setup has continued to evolve. While we three "founders" have participated in every round, we usually have a guest who joins in for a few at a time now too. We've also started doing "themed" rounds where participants are given a prompt to decide what albums to post. Some have been objective like: "participants must post an artist who shares their star sign", or entirely subjective like: "rainy day music". The majority of rounds so far have been a complete free-for-all—anyone can post anything that hasn't been shared yet. We try to limit ourselves to albums of reasonable length and number of songs though, and repeat artists are allowed but generally avoided.
         </p>
 
         <p>
-          Overall, it's been a fun, low-committment activity that keeps us connected and involves something we all enjoy.
+          Overall, the Music Club been a fun, low-committment activity that keeps us connected and involves something we all enjoy.
         </p>
       </section>
 
@@ -61,7 +61,7 @@ function ProjectMusicClub() {
         <h2>Problems and Plan</h2>
 
         <p>
-          Unfortunately, I realized fairly early on that group chats are not the best medium for organizing information. If I wanted to look back at my friends' favorite Avril Lavigne songs from her 2002 hit, <em>Let Go</em>, or find out who posted <em>Twin Temple (Bring You Their Signature Sound... Satanic Doo-Wop)</em>, I had to scroll and scroll and scroll through our multi-year chat history. The text thread format simply wasn't practical for summarizing our dozens of rounds, and the problem was only getting worse with time. On top of that, we also migrated to a different messaging app at one point—further fragmenting an already disorganized club history.
+          Unfortunately, I realized fairly early on that group chats are not the best medium for organizing information. If I wanted to look back at my friends' favorite Avril Lavigne songs from her 2002 hit, <em>Let Go</em>, or find out who posted <em>Twin Temple (Bring You Their Signature Sound... Satanic Doo-Wop)</em>, I had to do a lot of scrolling through our multi-year chat history. The text thread format simply wasn't practical for summarizing our dozens of rounds, and on top of that, we also migrated to a different messaging app at one point—further fragmenting an already disorganized club history.
         </p>
 
         <p>
@@ -90,7 +90,7 @@ function ProjectMusicClub() {
         </ul>
 
         <p>
-          And hey, if I could get access to music metadata (like through <a href="https://developer.spotify.com/documentation/web-api/">Spotify's API</a>), maybe I could answer more complex questions too:
+          If I could get access to music metadata (like through <a href="https://developer.spotify.com/documentation/web-api/">Spotify's API</a>), maybe I could answer more complex questions too:
         </p>
 
         <ul>
@@ -114,8 +114,9 @@ function ProjectMusicClub() {
         <h2>Starting from the Back(end)</h2>
 
         <h3>Database</h3>
+
         <p>
-          So where to begin? For starters, I needed all the data we were generating to be put in a single organized place. A structure that could be queried to answer those pressing questions I had. So...a database! But what information needed to be stored? Probably something like:
+          So where to begin? For starters, I needed all the data we were generating put in a single place-an organized structure that could be queried to answer those pressing questions I had. So...a database! But what information needed to be stored? Probably something like:
         </p>
 
         <p>
@@ -133,7 +134,7 @@ function ProjectMusicClub() {
         <ul>
           <li>Number</li>
           <li>Description</li>
-          <li>Date range</li>
+          <li>Timeframe</li>
           <li>Participants</li>
           <li>Albums</li>
         </ul>
@@ -148,22 +149,36 @@ function ProjectMusicClub() {
           <li>Track count</li>
           <li>Poster</li>
           <li>Top track</li>
-          <li>Picked tracks</li>
-          <ul>
-            <li>Title</li>
-            <li>Track number</li>
-            <li>Pickers</li>
-          </ul>
         </ul>
 
-        <img src="" alt="" />
-
         <p>
-          Perhaps not the most complete nor well-thought-out schema, but at the time it covered all my bases. I was still a bit blinded by MongoDB from my SaaS course, so
+          Picked Tracks
         </p>
 
+        <ul>
+          <li>Title</li>
+          <li>Track number</li>
+          <li>Pickers</li>
+        </ul>
+
         <p>
-          Now I had to actually implement the database. Again, following the precedent of my SaaS project, I created a MongoDB cluster using MongoDB Atlas which provided...At this point I could have used Atlas' web UI to populate the database document-by-document, but I didn't want to do that. I wanted to input this data in a pretty interface with custom forms for each model!  by myself since my goal was not to formalize the Music Club by making it an app everyone had to use. As bad as group chats are for organizing information, they're still pretty good for, well...chatting! I didn't want to change the atmosphere of the club for everyone.
+          Now to design the database schema. First question: SQL or NoSQL? I was already familiar (and comfortable) with MongoDB from my SaaS project, and I already had experience hosting a database on MongoDB Atlas and connecting to it from a Node.js application. I also wasn't sure how my data structures would evolve as the project took shape, so MongoDB seemed like a good option.
+        </p>
+
+        <p><em>I've given this more thought since the intial planning stage. Looking back, I wish I had ...</em></p>
+
+        <p>
+          There are a lot of ways this schema could be improved. For instance, when I wanted to track round participants, I took that quite literally and had each round document store an array of participant IDs. This wasn't very forward-thinking of me though, since I didn't give much thought to what this data <em>belonged to</em>. Should rounds track participanting members? Should members track participated rounds? Both? Neither? My initial idea for the interface was only to provide an overview of rounds, so I went into the planning phase with a round-centric mindset. But what if I wanted to look at a specific member in detail? Provide a whole page to cover their listening habits and...maybe list all the rounds they had participated in?
+        </p>
+
+        <ul>
+          <li>Rounds track participated members: </li>
+          <li>Members track participated rounds: </li>
+          <li>Both: </li>
+        </ul>
+
+        <p>
+          Now I had to actually implement the database. Again, following the precedent of my SaaS project, I created a MongoDB cluster using MongoDB Atlas which provided...
         </p>
 
         <img src="" alt="Wireframe of admin interface" />
@@ -171,7 +186,15 @@ function ProjectMusicClub() {
         <h3>REST API & Web Service</h3>
 
         <p>
+          At this point, I theoretically could have used the MongoDB Atlas web UI to populate my database document-by-document, but I didn't want to do that! I wanted to input data in a pretty interface with custom forms for each model! I wanted input validation! Dropdown lists! In order to do any of that though, my database had to be accessible and controllable using remote requests. Sounds like a job for a REST API! Following REST principles, I could CRUD documents using simple HTTP requests like POST, GET, PUT, and DELETE.
+        </p>
 
+        <p>
+          I had to create a server to respond to these requests and actually carry them out though.
+        </p>
+
+        <p>
+          by myself since my goal was not to formalize the Music Club by making it an app everyone had to use. As bad as group chats are for organizing information, they're still pretty good for, well...chatting! I didn't want to change the atmosphere of the club for everyone.
         </p>
       </section>
 
@@ -180,8 +203,6 @@ function ProjectMusicClub() {
 
         <p>
           Now that I had a functional API to CRUD objects in my database, the next step was to actually populate the database with members, rounds, and albums.
-
-
         </p>
       </section>
 
