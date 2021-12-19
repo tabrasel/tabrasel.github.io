@@ -186,11 +186,11 @@ function ProjectMusicClub() {
         <h3>REST API & Web Service</h3>
 
         <p>
-          At this point, I theoretically could have used the MongoDB Atlas web UI to populate my database document-by-document, but I didn't want to do that! I wanted to input data in a pretty interface with custom forms for each model! I wanted input validation! Dropdown lists! In order to do any of that though, my database had to be accessible and controllable using remote requests. Sounds like a job for a REST API! Following REST principles, I could CRUD documents using simple HTTP requests like POST, GET, PUT, and DELETE.
+          At this point, I theoretically could have just used the MongoDB Atlas web UI to populate my database document-by-document, but I didn't want to do that! I wanted to input data in a pretty interface with custom forms for each model! I wanted input validation! Dropdown lists! But in order to do any of that, my database had to be accessible and controllable from outside MongoDB Atlas. Sounded like a job for a API! Following REST API principles, I could CRUD documents using simple HTTP requests like POST, GET, PUT, and DELETE.
         </p>
 
         <p>
-          I had to create a server to respond to these requests and actually carry them out though.
+          These requests had to be sent somewhere though—a server, specifically, which would respond to them by carrying out the appropriate actions in the database and any other necessary operations.
         </p>
 
         <p>
