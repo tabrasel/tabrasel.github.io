@@ -1,7 +1,5 @@
 import styles from './Projects.module.css';
 
-import { Link } from 'react-router-dom';
-
 import ProjectListItem from './ProjectListItem';
 
 function Projects() {
@@ -11,20 +9,19 @@ function Projects() {
         <h1>Projects</h1>
 
         <p>
-          Below is a collection of coding projects I've worked on over the years—ranging from school assignments and personal projects to tasks from TerrainWorks and Mazama Science.
+          Below is a collection of coding projects I've worked on over the years, ranging from work and school assignments to personal ventures.
         </p>
       </header>
 
       <div className={styles.projectList}>
-        <Link to="/music-club">
-          <ProjectListItem
-            title="Music Club"
-            description="A fun and structured way to share music with friends."
-            context="Personal"
-            timeFrame="Jul 2021 - present"
-            tags={['React', 'Angular', 'Node.js', 'Express', 'MongoDB', 'S3', 'Heroku', 'HTML', 'CSS', 'JavaScript', 'TypeScript', 'Bootstrap']}
-            />
-        </Link>
+        <ProjectListItem
+          title="Music Club"
+          description="A music-sharing platform."
+          context="Personal"
+          timeFrame="Jul 2021 - present"
+          tags={['React', 'Angular', 'Node.js', 'Express', 'MongoDB', 'S3', 'Heroku', 'HTML', 'CSS', 'JavaScript', 'TypeScript', 'Bootstrap']}
+          linkTo="/music-club"
+        />
 
         <ProjectListItem
           title="Landslide Susceptibility"
@@ -32,7 +29,8 @@ function Projects() {
           context="Work (TerrainWorks)"
           timeFrame="Oct 2021 - Nov 2021"
           tags={['R', 'terra', 'mlr3', 'Random forest']}
-          />
+          linkTo="/music-club"
+        />
 
         <ProjectListItem
           title="Forested Wetlands"
@@ -40,7 +38,8 @@ function Projects() {
           context="Work (TerrainWorks)"
           timeFrame="Jul 2021 - Oct 2021"
           tags={['R', 'terra', 'Random forest']}
-          />
+          linkTo="/music-club"
+        />
 
         <ProjectListItem
           title="Dithereedoo"
@@ -48,7 +47,8 @@ function Projects() {
           context="Personal"
           timeFrame="Sep 2021"
           tags={['HTML', 'CSS', 'JavaScript', 'P5.js', 'Bootstrap']}
-          />
+          linkTo="/music-club"
+        />
 
         <ProjectListItem
           title="MazamaSatelliteUtils"
@@ -56,7 +56,8 @@ function Projects() {
           context="Work (Mazama Science)"
           timeFrame="Oct 2021 - Nov 2021"
           tags={['R', 'raster', 'ggplot2', 'ffmpeg']}
-          />
+          linkTo="/music-club"
+        />
 
         <ProjectListItem
           title="Recipes4U"
@@ -64,7 +65,8 @@ function Projects() {
           context="School (SaaS)"
           timeFrame="Jan 2021 - Mar 2021"
           tags={['Angular', 'Node.js', 'Express', 'MongoDB', 'HTML', 'CSS', 'TypeScript', 'Bootstrap']}
-          />
+          linkTo="/music-club"
+        />
 
         <ProjectListItem
           title="Air Monitor Archive"
@@ -72,7 +74,8 @@ function Projects() {
           context="Work (Mazama Science)"
           timeFrame="Jan 2021 - Mar 2021"
           tags={['HTML', 'CSS', 'JavaScript', 'JQuery', 'Leaflet', 'Bootstrap']}
-          />
+          linkTo="/projects/air-monitor-archive"
+        />
 
         <ProjectListItem
           title="SproinGL"
@@ -80,15 +83,17 @@ function Projects() {
           context="School (Computer Graphics)"
           timeFrame="Apr 2020 - Jun 2020"
           tags={['C++', 'OpenGL', 'GLFW']}
-          />
+          linkTo="/music-club"
+        />
 
         <ProjectListItem
           title="VCAS"
-          description="A video call quality analysis system."
+          description="A video call web app and quality analysis system."
           context="School (Capstone)"
           timeFrame="Sep 2019 - Jun 2020"
           tags={['HTML', 'CSS', 'TypeScript', 'WebRTC', 'EC2', 'Kinesis', 'S3', 'Lambda', 'ElasticSearch', 'Kibana']}
-          />
+          linkTo="/music-club"
+        />
       </div>
     </div>
   );

@@ -1,10 +1,12 @@
 import styles from './ProjectListItem.module.css';
 
+import { Link } from 'react-router-dom';
+
 import TagList from './TagList';
 
-function ProjectListItem({title, description, tags, context, timeFrame}) {
+function ProjectListItem({title, description, tags, context, timeFrame, linkTo}) {
   return (
-    <div className={styles.projectListItem}>
+    <Link className={styles.projectListItem} to={linkTo}>
       <div className={styles.projectListItemHeader}>
         <small>{context}</small>
         <small className={styles.timeFrame}>{timeFrame}</small>
@@ -16,7 +18,7 @@ function ProjectListItem({title, description, tags, context, timeFrame}) {
         </div>
         <TagList tags={tags} />
       </div>
-    </div>
+    </Link>
   );
 }
 
