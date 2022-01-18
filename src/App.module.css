@@ -23,10 +23,6 @@ p, ol, ul {
   font-size: min(calc(15px + 0.4vw), 22px);
 }
 
-p {
-  text-align: justify;
-}
-
 a {
   font-size: min(calc(15px + 0.4vw), 22px);
   color: #960000;
