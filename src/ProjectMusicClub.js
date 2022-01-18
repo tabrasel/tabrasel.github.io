@@ -1,3 +1,5 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import RulesImg from './rules.png';
 
 import { Link } from 'react-router-dom';
@@ -8,14 +10,16 @@ function ProjectMusicClub() {
       <h1>Music Club</h1>
 
       <section>
+        <h2>Backstory</h2>
+
         <p>
-          I can't quite remember what prompted it, but back in 2019, two friends and I started a group chat for sharing music. We posted a couple albums each and, several days later, one of us had an idea:
+          I can't remember what prompted it now, but back in 2019 two of my friends and I started a group chat for sharing music. We each posted an album for the others to check out and, several days later, one of us had a brainwave:
         </p>
 
         <img src={RulesImg} alt="The message that started it all" width="400px" />
 
         <p>
-          This simple plan not only provided a fun and structured way to share and discover albums, it also gave us a chance to learn about each others' music tastes. More rules were quickly established:
+          Doing this in monthly "rounds" seemed like a fun and structured way for us to share and discover albums while also learning about each others' music tastes. More rules were quickly established:
         </p>
 
         <img src="" alt="Message on voting for our top 3 songs" />
@@ -27,7 +31,7 @@ function ProjectMusicClub() {
         <img src="" alt="Message on album length limits" />
 
         <p>
-          The "round" structure that eventually emerged went something like this:
+          The "round" structure we eventually agreed on went something like this:
         </p>
 
         <ol>
@@ -35,7 +39,7 @@ function ProjectMusicClub() {
             Each participant posts a link to an album on Spotify.
           </li>
           <li>
-            Participants listen to all posted albums and compile a list of their three favorite songs for each.
+            Participants listen to all posted albums and note down their three favorite songs for each.
           </li>
           <li>
             Participants post their picked songs.
@@ -44,28 +48,28 @@ function ProjectMusicClub() {
             Votes for the picked songs are tallied. For each album, the song with the most votes is added to a shared Spotify playlist.
           </li>
           <li>
-            Rinse. Repeat.
+            Rinse, repeat.
           </li>
         </ol>
 
         <p>
-          We've kept this up for several years now, and the setup has continued to evolve. While we three "founders" have participated in every round, we usually have a guest who joins in for a few at a time now too. We've also started doing "themed" rounds where participants are given a prompt to decide what albums to post. Some have been objective like: "participants must post an artist who shares their star sign", or entirely subjective like: "rainy day music". The majority of rounds so far have been a complete free-for-all—anyone can post anything that hasn't been shared yet. We try to limit ourselves to albums of reasonable length and number of songs though, and repeat artists are allowed but generally avoided.
+          We kept this going for several years, and our system continued to evolve. While we three "founders" have participated in every round, we now usually have a guest who joins in for a few rounds at a time too. We've also started doing "themed" rounds where participants are given a prompt to decide what albums to post. Some have been objective like: "participants must post an artist who shares their star sign", or entirely subjective like: "rainy day music". The majority of rounds so far have been a complete free-for-all—anyone can post anything that hasn't been shared yet. We do try to limit ourselves to albums of reasonable length and number of songs though, and repeat artists are allowed but generally avoided.
         </p>
 
         <p>
-          Overall, the Music Club been a fun, low-committment activity that keeps us connected and involves something we all enjoy.
+          Overall, our music club been a fun, low-committment activity that keeps us connected and involves something we all enjoy.
         </p>
       </section>
 
       <section>
-        <h2>Problems and Plan</h2>
+        <h2>Problems</h2>
 
         <p>
-          Unfortunately, I realized fairly early on that group chats are not the best medium for organizing information. If I wanted to look back at my friends' favorite Avril Lavigne songs from her 2002 hit, <em>Let Go</em>, or find out who posted <em>Twin Temple (Bring You Their Signature Sound... Satanic Doo-Wop)</em>, I had to do a lot of scrolling through our multi-year chat history. The text thread format simply wasn't practical for summarizing our dozens of rounds, and on top of that, we also migrated to a different messaging app at one point—further fragmenting an already disorganized club history.
+          Unfortunately, I quicky realized that a group chat was not a great place for organizing information. If I wanted to remember my friends' favorite Avril Lavigne songs from her 2002 hit, <em>Let Go</em>, or find out who posted <em>Twin Temple (Bring You Their Signature Sound... Satanic Doo-Wop)</em>, I had to do a lot of scrolling through our multi-year chat history. The text thread format simply wasn't practical for summarizing our dozens of rounds, and on top of that we also migrated to a different messaging app at one point—further fragmenting our already disorganized club history.
         </p>
 
         <p>
-          Besides the practical shortcomings of our group chat, something else also began to dawn on me: <em>we're generating a lot of data!</em> Every posted album and liked song gave insight into each of our listening habits. We could learn a lot of interesting things about ourselves and the club by studying how we participated. Things like:
+          Besides the practical shortcomings of our group chat, something else also began to dawn on me: <em>we're generating a lot of data!</em> Every posted album and liked song gave insight into our members' listening habits. We could learn a lot of interesting things about ourselves and the club by studying how we participated. Things like:
         </p>
 
         <ul>
@@ -111,82 +115,76 @@ function ProjectMusicClub() {
       </section>
 
       <section>
-        <h2>Starting from the Back(end)</h2>
+        <h2>Starting at the Back(end)</h2>
 
         <h3>Database</h3>
 
         <p>
-          So where to begin? For starters, I needed all the data we were generating put in a single place-an organized structure that could be queried to answer those pressing questions I had. So...a database! But what information needed to be stored? Probably something like:
+          So where to begin? At the very least, I needed all the data we were generating to be kept in a single place—an organized structure that could be queried to answer those pressing questions I had. A database! But what information needed to be stored? What information did we even have?
         </p>
+
+        <div className="d-flex justify-content-between">
+          <div>
+            <p>
+              Members
+            </p>
+
+            <ul>
+              <li>Name</li>
+            </ul>
+          </div>
+
+          <div>
+            <p>
+              Rounds
+            </p>
+
+            <ul>
+              <li>Number</li>
+              <li>Description</li>
+              <li>Timeframe</li>
+              <li>Participants</li>
+              <li>Albums</li>
+            </ul>
+          </div>
+
+          <div>
+            <p>
+              Albums
+            </p>
+
+            <ul>
+              <li>Title</li>
+              <li>Artist</li>
+              <li>Track count</li>
+              <li>Poster</li>
+              <li>Top track</li>
+            </ul>
+          </div>
+
+          <div>
+            <p>
+              Picked Tracks
+            </p>
+
+            <ul>
+              <li>Title</li>
+              <li>Track number</li>
+              <li>Pickers</li>
+            </ul>
+          </div>
+        </div>
 
         <p>
-          Members
+          Given the small (and relatively private) scope of my project and the likelyhood of my models changing drastically with my vision for the platform, I decided to go the NoSQL route and set up a free MongoDB Atlas Cluster as my primary database. Looking back now, in some ways I regret my decision since my data has become increasingly relational and doesn't utilyze all the benefits of document-based stores, but at the same time I am thankful for the flexibility and its allowance for me to experiment with the information I keep track of.
         </p>
 
-        <ul>
-          <li>Name</li>
-        </ul>
-
-        <p>
-          Rounds
-        </p>
-
-        <ul>
-          <li>Number</li>
-          <li>Description</li>
-          <li>Timeframe</li>
-          <li>Participants</li>
-          <li>Albums</li>
-        </ul>
-
-        <p>
-          Albums
-        </p>
-
-        <ul>
-          <li>Title</li>
-          <li>Artist</li>
-          <li>Track count</li>
-          <li>Poster</li>
-          <li>Top track</li>
-        </ul>
-
-        <p>
-          Picked Tracks
-        </p>
-
-        <ul>
-          <li>Title</li>
-          <li>Track number</li>
-          <li>Pickers</li>
-        </ul>
-
-        <p>
-          Now to design the database schema. First question: SQL or NoSQL? I was already familiar (and comfortable) with MongoDB from my SaaS project, and I already had experience hosting a database on MongoDB Atlas and connecting to it from a Node.js application. I also wasn't sure how my data structures would evolve as the project took shape, so MongoDB seemed like a good option.
-        </p>
-
-        <p><em>I've given this more thought since the intial planning stage. Looking back, I wish I had ...</em></p>
-
-        <p>
-          There are a lot of ways this schema could be improved. For instance, when I wanted to track round participants, I took that quite literally and had each round document store an array of participant IDs. This wasn't very forward-thinking of me though, since I didn't give much thought to what this data <em>belonged to</em>. Should rounds track participanting members? Should members track participated rounds? Both? Neither? My initial idea for the interface was only to provide an overview of rounds, so I went into the planning phase with a round-centric mindset. But what if I wanted to look at a specific member in detail? Provide a whole page to cover their listening habits and...maybe list all the rounds they had participated in?
-        </p>
-
-        <ul>
-          <li>Rounds track participated members: </li>
-          <li>Members track participated rounds: </li>
-          <li>Both: </li>
-        </ul>
-
-        <p>
-          Now I had to actually implement the database. Again, following the precedent of my SaaS project, I created a MongoDB cluster using MongoDB Atlas which provided...
-        </p>
-
-        <img src="" alt="Wireframe of admin interface" />
+        <img src="" alt="MongoDB Atlas Cluster" />
 
         <h3>REST API & Web Service</h3>
 
         <p>
-          At this point, I theoretically could have just used the MongoDB Atlas web UI to populate my database document-by-document, but I didn't want to do that! I wanted to input data in a pretty interface with custom forms for each model! I wanted input validation! Dropdown lists! But in order to do any of that, my database had to be accessible and controllable from outside MongoDB Atlas. Sounded like a job for a API! Following REST API principles, I could CRUD documents using simple HTTP requests like POST, GET, PUT, and DELETE.
+          After creating my MongoDB Atals Cluster I theoretically could have just used its web interface to populate my database document-by-document, but who wants to do that?! I wanted to input data in a pretty UI with custom forms for each model! I wanted input validation! Dropdown lists! But in order to do any of that, my database had to be managable from outside MongoDB Atlas. I needed an API so that, using REST principles, I could CRUD documents using simple HTTP requests like POST, GET, PUT, and DELETE.
         </p>
 
         <p>
