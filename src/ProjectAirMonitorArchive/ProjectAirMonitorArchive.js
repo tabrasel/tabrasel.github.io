@@ -1,7 +1,15 @@
+import timeSeriesImg from './time_series.png';
+
+import styles from '../Project.module.css';
+
 function ProjectAirMonitorArchive() {
   return (
-    <div>
+    <div className={styles.Project}>
       <h1>Air Monitor Archive</h1>
+
+      <div className={styles.gallery}>
+        <img src={timeSeriesImg} height={480} />
+      </div>
 
       <section>
         <h2>Background</h2>

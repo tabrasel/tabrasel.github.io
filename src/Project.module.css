@@ -1,0 +1,10 @@
+.gallery {
+  display: flex;
+  justify-content: center;
+}
+
+.gallery img {
+  margin: 40px 0px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 15px 0px;
+}
