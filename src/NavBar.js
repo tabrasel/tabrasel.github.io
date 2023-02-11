@@ -5,24 +5,18 @@ import { Link } from 'react-router-dom';
 
 function NavBar() {
   return (
-    <div className={styles.NavBar}>
-      <nav className={`navbar navbar-expand-sm navbar-light container-sm px-3`}>
-        <Link className={styles.navBarBrand} to="/">Tate Brasel</Link>
-
-        <button className={`${styles.navbarToggler} navbar-toggler`} type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav">
-            <li className="nav-item">
-              <Link className={`${styles.navLink} nav-link`} to="/projects">Projects</Link>
-            </li>
-          </ul>
-        </div>
-      </nav>
+    <div className="d-flex flex-column align-items-center">
+      <div className={styles.socialIconList}>
+        <a href="https://www.linkedin.com/in/tate-brasel/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
+        <a href="https://github.com/tabrasel" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
+      </div>
+      <div className="">
+        <a className={styles.emailz} href="mailto:tatebrasel@gmail.com">tatebrasel@gmail.com</a>
+      </div>
     </div>
   );
 }
 
 export default NavBar;
+
+// 

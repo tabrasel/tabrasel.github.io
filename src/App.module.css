@@ -2,6 +2,7 @@
 
 
 .App {
+  width: 100%;
   font-family: 'Crimson Text', serif;
 }
 
@@ -25,7 +26,7 @@ p, ol, ul {
 
 a {
   font-size: min(calc(15px + 0.4vw), 22px);
-  color: #960000;
+  color: #888;
   text-decoration: none;
 }
 

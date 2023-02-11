@@ -1,5 +1,10 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .p {
-  font-size: min(calc(15px + 0.4vw), 22px);
   text-align: justify;
 }
 
@@ -18,8 +23,46 @@ h3 {
   height: calc(50px + 18vw);
   max-width: 256px;
   max-height: 256px;
-  border: 0.2vw solid #960000;
-  padding: calc(2px + 0.2vw);
   border-radius: 50%;
   background-color: white;
+}
+
+.projectList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.projectListItem {
+  width: min(calc(200px + 30vw), 600px);
+  display: flex;
+  align-items: center;
+  gap: min(calc(5px + 1vw), 25px);
+}
+
+.projectThumb {
+  width: calc(60px + 10vw);
+  height: calc(60px + 10vw);
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 10px 0px;
+}
+
+.blurb {
+  width: 600px;
+  font-size: min(calc(14px + 0.5vw), 22px);
+}
+
+.porthole {
+  clip-path: circle(50% at 50% 50%);
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+}
+
+.porthole img {
+  position: relative;
+  width: 200px;
 }

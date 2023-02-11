@@ -1,58 +1,57 @@
 import styles from './About.module.css';
 
+import { useState, useEffect } from 'react';
+
 import Profile from './profile.jpg';
+import Sundae from './sundae.jpg';
+import SundaeBW from './sundae_bw.jpg';
+import MusicClubThumb from './music_club_thumb.png';
+import SproinglThumb from './sproingl_thumb.png';
 
 function About() {
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  const handleScroll = () => setScrollPosition(window.pageYOffset);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <section>
-      <div className="d-flex justify-content-center mb-4">
-        <img className={styles.profileImg} src={Profile} alt="Profile" title="What you can't see here is the banana split I'm holding--the real reason I'm smiling."/>
+    <section className={styles.about}>
+      <div className="d-flex justify-content-center">
+        <div className={`${styles.porthole}`}>
+        <img src={SundaeBW} alt="Profile"
+          style={{ position: 'relative', 'top': (scrollPosition * 0.15 - 20) + 'px', }} />
+        </div>
       </div>
 
-      <section className="mb-5">
-        <h1 className="mb-2">About</h1>
-
-        <p className={styles.p}>
-          Hi, I'm Tate! I'm a recent computer science graduate from Seattle University and an aspiring software engineer.
-        </p>
-
-        <p className={styles.p}>
-          I have experience developing various geospatial data analysis tools from my time working at <a href="https://terrainworks.com/" target="_blank" rel="noopener noreferrer">TerrainWorks</a> and <a href="http://mazamascience.com/" target="_blank" rel="noopener noreferrer">Mazama Science</a>. At Mazama Science I helped build R packages for air quality data analysis and visualization, while at TerrainWorks I created machine-learning ArcGIS toolboxes for detecting geospatial features from LiDAR imagery. I found both experiences incredibly interesting, instructive, and rewarding given the roles of our products in land-use planning, environmental protection, and public health.
-        </p>
-
-        <p className={styles.p}>
-          Although my professional experience has been focused on R backends for GIS tools, I've always had a personal interest in frontends and visuals. The university courses I took in web development and SaaS inspired me to start building full-stack web applications in my spare time, and while these have helped me with personal interests, they have also helped me develop a foundation for pursuing a professional career building web-based tools.
-        </p>
-
-        <p className={styles.p}>
-          In my remaining free time (when I'm not coding!) you can usually find me reading vintage mystery novels, watching gialli, or listening to 70s poliziotteschi film soundtracks.
-        </p>
+      <section className="d-flex justify-content-center">
+        <div className={styles.blurb}>
+          <p className={styles.p}>Hi, I’m Tate! I'm a software engineer at <a href="https://www.concretesoftware.com/" target="_blank" rel="noopener noreferrer">Concrete Software</a> and previously wrote data analysis tools at <a href="https://terrainworks.com/" target="_blank" rel="noopener noreferrer">Terrainworks</a> and <a href="http://mazamascience.com/" target="_blank" rel="noopener noreferrer">Mazama Science</a>.</p>
+          <p className={styles.p}>I dabble in game and web development in my free time. Check out some of my projects!</p>
+        </div>
       </section>
 
-      <section>
-        <h1 className="mb-2">Skills</h1>
+      <section className={styles.projectList}>
+        <div className={styles.projectListItem}>
+          <img className={styles.projectThumb} src={MusicClubThumb} alt="Profile" />
+          <div>
+            <h1>Music Club</h1>
+            <p>A web platform for sharing music with friends. It’s like a book club—except instead of reading books you listen to albums!</p>
+          </div>
+        </div>
 
-        <h3>Languages</h3>
-        <p className={styles.p}>
-          Java, Python, R, HTML, CSS, JavaScript, TypeScript, SQL
-        </p>
-
-        <h3>Web Technologies</h3>
-        <p className={styles.p}>
-          React, Angular, Node.js, Express, Mongoose, P5.js
-        </p>
-
-        <h3>Other Technologies</h3>
-        <p className={styles.p}>
-          git, GitHub, MongoDB, AWS, Heroku, ArcGIS
-        </p>
-
-        <h3>Development Process</h3>
-        <p className={styles.p}>
-          Working in an agile team, pair programming, planning sprints, giving technical presentations, writing documantation, project tracking with Jira
-        </p>
+        <div className={styles.projectListItem}>
+          <img className={styles.projectThumb} src={SproinglThumb} alt="Profile" />
+          <div>
+            <h1>SproinGL</h1>
+            <p>A spring-physics-based 3D action game. Written in C++ with OpenGL for a graphics programming course.</p>
+          </div>
+        </div>
       </section>
-    </section>
+    </section >
   );
 }
 

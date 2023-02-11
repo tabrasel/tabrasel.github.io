@@ -1,13 +1,20 @@
 .NavBar {
-  border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
 }
 
-.navBarBrand {
-  margin-right: min(calc(24.5454px + 0.6545vw), 36px);
-  color: black;
-  font-size: min(calc(24.5454px + 0.6545vw), 36px);
+.emailz a {
+    font-style: italic;
 }
 
-.navLink {
-  color: blue;
+.socialIconList {
+    margin-top: 10px;
+    display: flex;
+    grid-gap: min(calc(1050px + 0.4vw), 32px);
+    
+}
+
+.socialIconList a {
+    font-size: min(calc(1050px + 0.4vw), 32px);
+    color: black;
 }
