@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.ff5c8a7b.chunk.css",
-    "main.js": "/static/js/main.43b2d5e6.chunk.js",
-    "main.js.map": "/static/js/main.43b2d5e6.chunk.js.map",
+    "main.js": "/static/js/main.af5cc0bf.chunk.js",
+    "main.js.map": "/static/js/main.af5cc0bf.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.3341b2ea.js",
     "runtime-main.js.map": "/static/js/runtime-main.3341b2ea.js.map",
     "static/css/2.383c0125.chunk.css": "/static/css/2.383c0125.chunk.css",
@@ -17,7 +17,7 @@
     "static/media/rules.04bd568d.png": "/static/media/rules.04bd568d.png",
     "static/media/sproingl_thumb.8fe038e8.png": "/static/media/sproingl_thumb.8fe038e8.png",
     "static/media/sundae.a5487ab7.jpg": "/static/media/sundae.a5487ab7.jpg",
-    "static/media/sundae_bw.7fc389dd.jpg": "/static/media/sundae_bw.7fc389dd.jpg",
+    "static/media/sundae_bw.1e583148.jpg": "/static/media/sundae_bw.1e583148.jpg",
     "static/media/time_series.76ee5ef5.png": "/static/media/time_series.76ee5ef5.png"
   },
   "entrypoints": [
@@ -25,6 +25,6 @@
     "static/css/2.383c0125.chunk.css",
     "static/js/2.4589f5a2.chunk.js",
     "static/css/main.ff5c8a7b.chunk.css",
-    "static/js/main.43b2d5e6.chunk.js"
+    "static/js/main.af5cc0bf.chunk.js"
   ]
 }
