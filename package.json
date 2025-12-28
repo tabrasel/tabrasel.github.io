@@ -1,0 +1,14 @@
+{
+  "name": "tabrasel.github.io",
+  "version": "1.0.0",
+  "homepage": "https://tabrasel.github.io",
+  "scripts": {
+    "deploy": "gh-pages -d ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}
